@@ -22,11 +22,7 @@ const books = [
  * @param {number} pagesLimit
  * @returns {Book}
  */
-function findSuitableBook(
-    genre: string,
-    pagesLimit: number,
-    multipleRecommendations = true
-): Book | Book[] {
+function findSuitableBook(genre: string, pagesLimit: number, multipleRecommendations = true): Book | Book[] {
     const findAlgorithm = (book: Book) => {
         return book.genre === genre && book.pageAmount <= pagesLimit
     }
@@ -38,15 +34,16 @@ function findSuitableBook(
     }
 }
 
-    const recommendedBook = findSuitableBook('fantasy', 1000)
+const recommendedBook = findSuitableBook('fantasy', 1000)
 
-    if(recommendedBook instanceof Book) {
-        console.log(recommendedBook.name)
-    } else {
-        console.log(recommendedBook[0].name)
-    }
-}
+console.log(recommendedBook.name)
 
-console.log(findSuitableBook('fantasy', 1000));
-console.log(findSuitableBook('fantasy', "1000"));
-console.log(findSuitableBook(1000, 'fantasy'));
+// if (recommendedBook instanceof Book) {
+//     console.log(recommendedBook.name)
+// } else {
+//     console.log(recommendedBook[0].name)
+// }
+//
+// console.log(findSuitableBook('fantasy', 1000));
+// console.log(findSuitableBook('fantasy', "1000"));
+// console.log(findSuitableBook(1000, 'fantasy'));

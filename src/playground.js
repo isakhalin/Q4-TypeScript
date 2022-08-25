@@ -23,21 +23,12 @@ function findSuitableBook(genre, pagesLimit, multipleRecommendations = true) {
         return book.genre === genre && book.pageAmount <= pagesLimit
     }
 
-    if(multipleRecommendations) {
+    if (multipleRecommendations) {
         return books.filter(findAlgorithm)
     } else {
         return books.find(findAlgorithm)
     }
+}
 
     const recommendedBook = findSuitableBook('fantasy', 1000)
     console.log(recommendedBook.name)
-}
-
-console.log(findSuitableBook('fantasy', 1000));
-console.log(findSuitableBook('fantasy', '1000'));
-console.log(findSuitableBook('fantasy'));
-console.log(findSuitableBook(1000, 'fantasy'));
-console.log(findSuitableBook(1000));
-console.log(findSuitableBook());
-
-console.log(findSuitableBook().name);
