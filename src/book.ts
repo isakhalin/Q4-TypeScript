@@ -1,11 +1,11 @@
 export class Book {
   name: string;
   genre: string;
-  pageAmount: number
+  price: number
 
-  constructor(name: string, genre: string, pageAmount: number) {
+  constructor(name: string, genre?: string, price?: number) {
     this.name = name
     this.genre = genre
-    this.pageAmount = pageAmount
+    this.price = price
   }
 }

@@ -1,5 +1,25 @@
-import { Book } from './book.js';
-import { books } from './book-collection.js';
+import {Book} from './book.js';
+import {serialize} from "./helpers.js";
+import {books} from "./book-collection.js";
+
+let genre: string = 'fantasy';
+let price = 980;
+
+const book = new Book('Harry Potter', genre, price);
+
+console.log(serialize((book)));
+console.log(serialize(null));
+console.log(serialize(undefined));
+console.log(serialize(5));
+console.log(serialize(false));
+
+console.log(book.genre.toUpperCase(), book.price.toFixed(2))
+
+if (book.price == null) {
+  console.log('Книги нет в продаже')
+} else {
+  console.log('Вы можете купить книгу')
+}
 
 /**
  * @param {string} genre
