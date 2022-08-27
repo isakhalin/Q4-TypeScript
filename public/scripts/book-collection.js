@@ -1,4 +1,5 @@
 import { Book } from './book.js';
+
 export const books = [
     new Book("Harry Potter and Philosopher\'s Stone!!!!", 'fantasy', 980),
     new Book('Lord of the Ring', 'fantasy', 1001),
